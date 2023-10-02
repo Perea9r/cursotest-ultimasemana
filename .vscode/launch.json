@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-CursorestApplication<cursorest>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "semana.dos.cursorest.CursorestApplication",
+            "projectName": "cursorest",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
