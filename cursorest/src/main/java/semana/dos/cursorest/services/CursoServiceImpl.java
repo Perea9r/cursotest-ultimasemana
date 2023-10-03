@@ -2,17 +2,19 @@ package semana.dos.cursorest.services;
 
 import java.util.List;
 import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import semana.dos.cursorest.models.Curso;
 import semana.dos.cursorest.repositories.CursoRepository;
 
 @Service
-public class CursoServiceImpl implements CursoService{
+public class CursoServiceImpl implements CursoService {
     @Autowired
     CursoRepository repository;
-    
-    public List<Curso> cursos(){
+
+    public List<Curso> cursos() {
         return repository.findAll();
     }
 

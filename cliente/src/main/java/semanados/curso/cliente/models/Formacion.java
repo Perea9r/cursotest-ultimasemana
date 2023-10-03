@@ -1,6 +1,11 @@
-package semanados.curso.cliente;
+package semanados.curso.cliente.models;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Formacion {
+    @Id
     private String curso;
     private int asignaturas;
     private int precio;
@@ -10,6 +15,7 @@ public class Formacion {
     }
 
     public Formacion(String curso, int asignaturas, int precio) {
+        super();
         this.curso = curso;
         this.asignaturas = asignaturas;
         this.precio = precio;
