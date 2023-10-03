@@ -17,6 +17,11 @@ public class FormacionServiceImpl implements FormacionService {
     private RestTemplate restTemplate;
     private String cursosUrl = "http://localhost:8080/";
 
+    /**
+     * Devuelve la lista de formaciones disponibles.
+     *
+     * @return la lista de formaciones disponibles.
+     */
     @Override
     public List<Formacion> getCursos() {
         List<Curso> response = Arrays.asList(restTemplate.getForObject(cursosUrl + "cursos", Curso[].class));
@@ -30,6 +35,12 @@ public class FormacionServiceImpl implements FormacionService {
         return formaciones;
     }
 
+    /**
+     * Da de alta un nuevo curso a partir de los datos de formación recibidos en el
+     * cuerpo.
+     *
+     * @param formacion los datos de formación del nuevo curso.
+     */
     @Override
     public void altaCurso(Formacion formacion) {
         boolean existe = false;

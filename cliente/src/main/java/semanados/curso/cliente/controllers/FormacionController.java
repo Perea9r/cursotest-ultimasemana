@@ -17,11 +17,22 @@ public class FormacionController {
     @Autowired
     private FormacionService formacionService;
 
+    /**
+     * Devuelve la lista de formaciones disponibles.
+     *
+     * @return la lista de formaciones disponibles.
+     */
     @GetMapping(value = "/formaciones", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Formacion> formaciones() {
         return formacionService.getCursos();
     }
 
+    /**
+     * Da de alta un nuevo curso a partir de los datos de formación recibidos en el
+     * cuerpo.
+     *
+     * @param formacion los datos de formación del nuevo curso.
+     */
     @PostMapping(value = "/formacion", consumes = MediaType.APPLICATION_JSON_VALUE)
     public void altaFormacion(@RequestBody Formacion formacion) {
         formacionService.altaCurso(formacion);
