@@ -46,8 +46,9 @@ public class CursoController {
     }
 
     @PutMapping(value = "/curso/{id}/{duracion}", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public void actualizarCurso(@RequestBody Curso curso) {
+    public ResponseEntity<List<Curso>> actualizarCurso(@RequestBody Curso curso) {
         service.actualizarCurso(curso);
+        return new ResponseEntity<>(service.cursos(), HttpStatus.OK);
     }
 
     @DeleteMapping("/curso/{id}")
