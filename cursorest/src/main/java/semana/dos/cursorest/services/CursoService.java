@@ -10,4 +10,5 @@ public interface CursoService {
     Curso buscarCurso(int id);
     Curso actualizarCurso(Curso curso);
     List<Curso> eliminaCurso(int id);
+    List<Curso> cursosPorPrecio(int minPrecio, int maxPrecio);
 }
