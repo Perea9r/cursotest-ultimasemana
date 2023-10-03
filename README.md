@@ -20,7 +20,14 @@ Este proyecto esta diseñado para permitir la creación, lectura, actualización
 
 ## Uso
 
-Mandar peticiones desde el puerto 8081 a través de postman.
+Mandar peticiones desde el puerto 8080 a través de postman.
+
+- **GET /cursos**: Devuelve una lista de todos los cursos disponibles en la aplicación.
+- **GET /curso/{id}**: Busca un curso por su ID y devuelve el curso correspondiente si existe.
+- **POST /curso**: Crea un nuevo curso con la información proporcionada en el cuerpo de la solicitud.
+- **PUT /curso/{id}/{duracion}**: Actualiza un curso existente con la información proporcionada en el cuerpo de la solicitud.
+- **DELETE /curso/{id}**: Elimina un curso existente por su ID.
+- **GET /curso/{min}/{max}**: Devuelve una lista de cursos que se encuentran dentro del rango de precios especificado.
 
 ## Licencia
 
